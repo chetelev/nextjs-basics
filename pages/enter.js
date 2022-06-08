@@ -25,7 +25,7 @@ function SignInButton() {
 
   return (
       <button className="btn-google" onClick={signInWithGoogle}>
-        <img src={'/google.png'} width="30px" /> Sign in with Google
+        <img width="30px" /> Sign in with Google
       </button>
   );
 }
@@ -80,6 +80,7 @@ function UsernameForm() {
   //
 
   useEffect(() => {
+    console.log('use effect')
     checkUsername(formValue);
   }, [formValue]);
 
