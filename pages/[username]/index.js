@@ -19,7 +19,11 @@ export async function getServerSideProps({ query }) {
       .limit(5);
 
     posts = (await postsQuery.get()).docs.map(postToJSON);
-    console.log(posts)
+    console.log(posts);
+  } else {
+    return {
+      notFound: true,
+    };
   }
 
   return {
